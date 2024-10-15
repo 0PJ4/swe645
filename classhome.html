@@ -1,0 +1,104 @@
+<!-- Puneeth Thumma - G01464313 - Assignment 1-->
+<!-- using HTML and CSS, I've created a class homepage which contains an image, some course description and a button that acts as a hyperlink to the survey form.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWE 645 Home</title>
+    <!-- Embedded CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .class-info {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .class-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .class-description {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to SWE 645</h1>
+        </header>
+        <!-- Image and course information -->
+        <section class="class-info">
+            <img src="picture.jpg" alt="Class Image" class="class-image">
+            <h2>Class Description</h2>
+            <p class="class-description">
+                SWE 645 covers some of the topics related to the software development models 
+that are used to support component-based software systems. We will be 
+studying the software design and development side of component-based 
+software that includes design principles to architect resilient, highly available, 
+performance oriented, and secure applications in AWS cloud. The course 
+content will largely focus on server-side software design and development. We 
+will learn technologies such as Resilient Architectures in AWS cloud, MVC based Java Server Faces (JSF) Web Development Framework , 
+PrimeFaces, Angular -  JavaScript Framework, Python Programming, 
+DevOps - CI/CD, Containerized Microservices, Kubernetes, Java 
+Persistence API (JPA 2.0)/ Hibernate, NoSQL Databases/ DynamoDB, 
+Data Warehousing/ Redshift, RESTful Web services, and Serverless 
+Computing (AWS Lambda, API Gateway).
+We will use a cloud computing platform: Amazon Web Services (AWS) to 
+deploy applications developed as programming projects for the course.
+
+            </p>
+            <!-- The link for the survey form. -->
+            <a href="http://34.228.169.72/" class="btn" target="_blank">Survey</a>
+        </section>
+    </div>
+</body>
+</html>

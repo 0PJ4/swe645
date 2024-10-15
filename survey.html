@@ -1,0 +1,117 @@
+<!-- Puneeth Thumma - G01464313 - Assignment 1-->
+<!-- using HTML and CSS, I've created the survey form with all the given requirements.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+          <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Survey Page</title>
+        <!-- Embedded CSS -->
+        <style>
+            body {
+                margin: 50px;
+                font-family: Arial, sans-serif;
+                background-color: aliceblue;
+            }
+            h1 {
+                background-color: green;
+                color: white;
+                padding: 15px;
+                text-align: center;
+            }
+            h2, h3 {
+                margin-bottom: 15px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            label {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            input[type="text"], input[type="number"], input[type="tel"], input[type="email"], input[type="date"] {
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+            }
+            input[type="submit"] {
+                background-color: green;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+            input[type="submit"]:hover {
+                background-color: darkgreen;
+            }
+            .form-section {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Survey Form</h1>
+        <form>
+            <!-- Personal infomation -->
+            <div class="form-section">
+                <h2>Please fill out your personal information.</h2>
+                <label for="fname">First Name:</label><small style="display: inline; color: red;">*</small>
+                <input type="text" id="fname" name="fname" required><br><br>
+
+                <label for="lname">Last Name:</label><small style="display: inline; color: red;">*</small>
+                <input type="text" id="lname" name="lname" required><br><br>
+
+                <label for="stadd">Street Address:</label><small style="display: inline; color: red;">*</small>
+                <input type="text" id="stadd" name="stadd" required><br><br>
+
+                <label for="city">City:</label><small style="display: inline; color: red;">*</small>
+                <input type="text" id="city" name="city" required><br><br>
+
+                <label for="zip">ZIP:</label><small style="display: inline; color: red;">*</small>
+                <input type="tel" id="zip" name="zip" pattern="[0-9]{5}" required><br><br>
+
+                <label for="phno">Phone Number:</label><small style="display: inline; color: red;">*</small>
+                <input type="tel" id="phno" name="phno" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890" required><br><br>
+
+                <label for="email">GMU Email:</label><small style="display: inline; color: red;">*</small>
+                <input type="email" id="email" name="email" placeholder="abc@xyz.com" required><br><br>
+
+                <label for="date">Date:</label><small style="display: inline; color: red;">*</small>
+                <input type="date" id="date" name="date" required><br><br>
+            </div>
+            <!-- Survey questions using checkboxes and radio buttons -->
+            <div class="form-section">
+                <h3>Answer the following questions.</h3>
+                <p>What did you most like about the campus?</p>
+                <label><input type="checkbox" name="liked" value="Student"> Student</label><br>
+                <label><input type="checkbox" name="liked" value="Location"> Location</label><br>
+                <label><input type="checkbox" name="liked" value="Campus"> Campus</label><br>
+                <label><input type="checkbox" name="liked" value="Atmosphere"> Atmosphere</label><br>
+                <label><input type="checkbox" name="liked" value="Dorm Rooms"> Dorm Rooms</label><br>
+                <label><input type="checkbox" name="liked" value="Sports"> Sports</label><br><br>
+
+                <p>How did you get interested in the university?</p>
+                <label><input type="radio" name="interested" value="Friends"> Friends</label>
+                <label><input type="radio" name="interested" value="Television"> Television</label>
+                <label><input type="radio" name="interested" value="Internet"> Internet</label>
+                <label><input type="radio" name="interested" value="Other"> Other</label>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
